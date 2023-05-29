@@ -1,0 +1,115 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    background-color: blue;
+    box-sizing: border-box;
+}
+li{
+    list-style-type: none;
+    padding: 15px;
+    text-align: center;
+    text-shadow: 5px;
+    font-size: 15px;
+}
+a {
+    text-decoration:none;
+    color: pink;
+  }
+
+
+  main{
+    display: flex;
+   width: auto;
+  }
+
+  .error{
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+  }
+  .pouring {
+    top: 10px;
+    padding-top: 5px;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 900;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    text-align: center;
+    right: 14px;
+    border-radius: 10px;
+}
+.pouring:before {
+    content: '';
+    position: absolute;
+    filter: blur(10px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    background-image: repeating-linear-gradient(-45deg, transparent, transparent 1em, #BFE2FF 1em, #337AB7 50%), repeating-linear-gradient(45deg, #337AB7, #337AB7 1em, #FFF 1em, #BFE2FF 50%);
+    background-size: 3em 3em, 2em 2em;
+    animation-name: ani;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes ani {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+@media (max-width:600px) {    
+    .pouring {font-size: 20px;}    
+}
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333333;
+    z-index: 99999;
+  }
+  
+  .loader {
+    border: 16px solid #333333;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+main{
+        max-width: 600px; 
+        border-radius: 5px; 
+        border: 1px solid #000; 
+        padding: 30px;
+        margin: 20px 0 1.5vh -10px;
+        background-color: rgb(184, 181, 20);
+}
+body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
